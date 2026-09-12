@@ -1,46 +1,21 @@
-# Kotki Dwa — strona na GitHub Pages
+# Kotki Dwa
 
-Statyczna strona behawiorystki kotów (Natalia, PAZiA). Czysty HTML + CSS, bez zależności i buildów. Opublikowana na GitHub Pages pod adresem:
+Strona internetowa behawiorystki kotów &ndash; Natalia (PAZiA).
 
+Strona jest dostępna pod adresem:
 **https://wilawerek.github.io/kotkidwa/**
 
-## Podgląd lokalnie
+## Podgląd lokalny
 
 ```sh
 python3 -m http.server 8000
 ```
-
-i otwórz http://localhost:8000 w przeglądarce.
+Otwórz w przeglądarce: http://localhost:8000
 
 ## Publikacja
 
-Strona jest publikowana automatycznie z gałęzi `main` (GitHub Pages, deploy from branch). Wystarczy:
+Strona to czysty HTML i CSS publikowany automatycznie przez GitHub Pages z gałęzi `main`. Aby opublikować zmiany:
 
 ```sh
 git push origin main
 ```
-
-Pierwsze opublikowanie strony trwa zwykle ok. 1 minuty (Settings → Pages).
-
-## Struktura
-
-```
-index.html        # landing page (wszystkie sekcje)
-style.css         # paleta i style (bez zewnętrznych zasobów)
-assets/           # logo + zdjęcia
-```
-
-## Paleta
-
-Kolory są spójne z motywem WordPress `kotkidwa-child` (theme.json) — 12 kolorów jako zmienne CSS w `:root` (`--blue-primary`, `--teal`, `--pink-light` itd.).
-
-## Własna domena (opcjonalnie, na później)
-
-Dodaj plik `CNAME` z domeną (np. `kotkidwa.pl`) i ustaw rekord DNS u dostawcy — GitHub Pages poda HTTPS automatycznie.
-
-## Do zrobienia / pomysły
-
-- Formularz wstępny przed konsultacją (np. przez Formspree)
-- Materiały do pobrania dla opiekunów (PDF)
-- Podstrony: blog / artykuły
-- Integracja rezerwacji (Calendly)
