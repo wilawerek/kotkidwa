@@ -399,30 +399,35 @@ p:last-child {
   padding: 1.75rem;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.75rem;
+  gap: 1.5rem;
   border: 1px solid rgba(44, 34, 46, 0.08);
 }
 
 .fact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.5rem;
+  display: block;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1.5rem;
+  align-items: start;
+  text-align: left;
+}
+
+.fact + .fact {
+  border-top: 1px solid rgba(44, 34, 46, 0.1);
+  padding-top: 1.5rem;
 }
 
 .fact-num {
-  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--blue-primary);
   line-height: 1.1;
+  padding-top: 0.2em;
 }
 
 .fact-desc {
   font-size: var(--fs-sm);
   color: rgba(44, 34, 46, 0.85);
   line-height: 1.4;
-  max-width: 240px;
 }
 
 .fact-desc strong {
@@ -959,10 +964,6 @@ p:last-child {
 
 /* MEDIA QUERIES (Tablet & Desktop) */
 @media (min-width: 640px) {
-  .facts-card {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .cards--cats {
     grid-template-columns: repeat(2, 1fr);
   }
