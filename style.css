@@ -295,29 +295,49 @@ p:last-child {
 }
 
 /* Sekcje */
+/* Fakt — sekcje kryją stały kolor bazowy, gradienty nadpisują obrazem wg ID.
+   Przepływ: dół sekcji N = góra sekcji N+1. */
 .section {
   padding-top: clamp(3.5rem, 6vw, 5rem);
   padding-bottom: clamp(3.5rem, 6vw, 5rem);
   scroll-margin-top: 4.5rem;
   border-bottom: 1px solid rgba(44, 34, 46, 0.06);
-
 }
 
 .section--light {
   background-color: #ffffff;
-  /* background-color:var(--background-alt); */
 }
 
 .section--alt {
   background-color: var(--background-alt);
 }
 
+/* System gradientów tła — płynny przepływ między sekcjami (dół = góra następnej) */
+#o-mnie {
+  background-image: linear-gradient(180deg, var(--pink-light) 0%, #ffffff 100%);
+}
+
+#kocie-muzy {
+  background-image: linear-gradient(180deg, #ffffff 0%, var(--background-alt) 100%);
+}
+
+#filozofia {
+  background-image: linear-gradient(180deg, var(--background-alt) 0%, var(--background) 100%);
+}
+
+#uslugi {
+  background-image: linear-gradient(180deg, var(--background) 0%, #ffffff 100%);
+}
+
+#cennik {
+  background-image: linear-gradient(180deg, #ffffff 0%, var(--background) 100%);
+}
+
 /* HERO */
 .hero {
   padding-top: clamp(3.5rem, 7vw, 5.5rem);
   padding-bottom: clamp(3.5rem, 7vw, 5.5rem);
-  background: linear-gradient(0deg, var(--background) 0%, var(--pink-light) 100%);
-  /* background: linear-gradient(180deg, var(--background) 0%, #fff7f9 100%); */
+  background: linear-gradient(180deg, var(--background) 0%, var(--pink-light) 100%);
   border-bottom: 1px solid rgba(44, 34, 46, 0.06);
 }
 
